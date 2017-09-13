@@ -412,13 +412,13 @@ We will use an ultrasound transducer to bounce a sound wave off of an object a k
                         // of the ping to the reception of its echo off of an object.
                         time_of_flight_microseconds += pulseIn(echo_pin, HIGH);
                 }
-                time_of_flight_microseconds /= sample_averages; //average samples to minimise the influence of measurement jitter
+                time_of_flight_microseconds /= sample_averages; //average samples to minimize the influence of measurement jitter
                 time_of_flight_seconds = time_of_flight_microseconds / 1000000;
                 Serial.begin(9600);
                 Serial.println(F("Distance measured in inches: 12"));
                 //distance_in_inches = Serial.parseInt();
                 distance_in_inches = 12;
-                distance_in_inches *= 2; //The sound has to travel out and back so the total
+                distance_in_inches = distance_in_inches * 2; //The sound has to travel out and back so the total
                 distance is two times that measured
                         distance_in_feet = distance_in_inches / 12;
                 //Speed = distance / time
@@ -432,7 +432,7 @@ We will use an ultrasound transducer to bounce a sound wave off of an object a k
         void loop()
         {
         }
-        // According to Parallax's datasheet for the PING, there are
+        // According to Parallax's data-sheet for the PING, there are
         // 73.746 microseconds per inch (i.e. sound travels at ~1130 feet per
         // second at room temperature and standard pressure).
 
@@ -449,6 +449,7 @@ Learn more about PID Feedback here: http://brettbeauregard.com/blog/2011/04/impr
 This exercise will walk you through a simple sketch that receives serial data from the computer and uses that data to control a servo motor.
 In order to use the servo motor, you will have to use the Servo library. It should be built-in to the Arduino IDE, but if not you can install it using the same steps from the LCD exercise. Once you are sure that the library is installed, set up the circuit shown, copy the code below into the Arduino IDE and upload it. Make sure that the wires are connected correctly, as the pinout on the connectors is sometimes different than the pinout on the motor. After programming, open the Serial Monitor and set the baud rate to 9600. You should see instructions, and you can now type in a value between 0 and 155. If everything is set up correctly, the servo should immediately spin to the desired angle. You can also try inputting values outside the correct range to see what happens (and why you should always include some sort of error checking into your sketches).
 ###  Setup for the Exercise
+![](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/servo.png?raw=true)
 ###  Code
 
 ## 15 Exercise Fifteen - Stream Cypher - B1111
