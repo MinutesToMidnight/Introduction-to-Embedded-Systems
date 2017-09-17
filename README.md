@@ -14,22 +14,22 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-one---hello-arduino---b0001
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-two---led-there-be-light---b0010
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-two---led-there-be-light---b0010
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-three---make-some-noise---b0011
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-four---sound-smart---b0100
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-five---push-a-button---b0101
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-six---detect-body-heat-in-motion---b0110
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-seven---usb-for-fun-and-profit---b0111
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-eight---look-inside-a-wire---b1000
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-nine---hear-the-light---b1001
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-ten---reading-lcd-leaves---b1010
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-eleven---pet-an-electron---b1011
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-twelve---how-fast---b1100
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-thirteen---flying-circus---b1101
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-fourteen---serial-servo---b1110
-* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#15-exercise-fifteen---stream-cypher---b1111
+* [exercise-one---hello-arduino---b0001](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-one---hello-arduino---b0001)
+* [exercise-two---led-there-be-light---b0010](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-two---led-there-be-light---b0010)
+* [exercise-two---led-there-be-light---b0010](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-two---led-there-be-light---b0010)
+* [exercise-three---make-some-noise---b0011](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-three---make-some-noise---b0011)
+* [exercise-four---sound-smart---b0100](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-four---sound-smart---b0100)
+* [exercise-five---push-a-button---b0101](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-five---push-a-button---b0101)
+* [exercise-six---detect-body-heat-in-motion---b0110](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-six---detect-body-heat-in-motion---b0110)
+* [exercise-seven---usb-for-fun-and-profit---b0111](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-seven---usb-for-fun-and-profit---b0111)
+* [exercise-eight---look-inside-a-wire---b1000](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-eight---look-inside-a-wire---b1000)
+* [exercise-nine---hear-the-light---b1001](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-nine---hear-the-light---b1001)
+* [exercise-ten---reading-lcd-leaves---b1010](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-ten---reading-lcd-leaves---b1010)
+* [exercise-eleven---pet-an-electron---b1011](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-eleven---pet-an-electron---b1011)
+* [exercise-twelve---how-fast---b1100](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-twelve---how-fast---b1100)
+* [exercise-thirteen---flying-circus---b1101](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-thirteen---flying-circus---b1101)
+* [exercise-fourteen---serial-servo---b1110](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-fourteen---serial-servo---b1110)
+* [exercise-fifteen---stream-cypher---b1111](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-fifteen---stream-cypher---b1111)
 
 ## Exercise One - Hello Arduino - B0001
 ### Making a Piezo Beep Out a Chip Tune
@@ -470,7 +470,7 @@ It is left to the reader to figure out how to fabricate a rubber band launcher o
 ![](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/servo.png?raw=true)
 ###  Code
 See instructor...
-## 15 Exercise Fifteen - Stream Cypher - B1111
+## Exercise Fifteen - Stream Cypher - B1111
 ###  Use the XOR operator and a PRNG to build a toy stream cypher
 This exercise will walk you through a simple sketch that receives serial data from the computer and uses the XOR ^ operator to encrypt and decrypt messages. Copy the code below into the Arduino IDE and upload it. After programming, open the Serial Monitor and set the baud rate to 9600. You should see instructions, and you can now type in the secret key below, hit enter, and copy in the example encrypted message. If everything is set up correctly, the terminal will display a fun message, and possibly a link...
 
