@@ -14,7 +14,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-* [exercise-one---hello-arduino---b0001](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-one---hello-arduino---b0001)
+* [exercise-one hello-arduino b0001](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-one---hello-arduino---b0001)
 * [exercise-two---led-there-be-light---b0010](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-two---led-there-be-light---b0010)
 * [exercise-two---led-there-be-light---b0010](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-two---led-there-be-light---b0010)
 * [exercise-three---make-some-noise---b0011](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-three---make-some-noise---b0011)
