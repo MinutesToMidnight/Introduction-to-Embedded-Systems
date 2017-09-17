@@ -14,6 +14,23 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-one---hello-arduino---b0001
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-two---led-there-be-light---b0010
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-two---led-there-be-light---b0010
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-three---make-some-noise---b0011
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-four---sound-smart---b0100
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-five---push-a-button---b0101
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-six---detect-body-heat-in-motion---b0110
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-seven---usb-for-fun-and-profit---b0111
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-eight---look-inside-a-wire---b1000
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-nine---hear-the-light---b1001
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-ten---reading-lcd-leaves---b1010
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-eleven---pet-an-electron---b1011
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-twelve---how-fast---b1100
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-thirteen---flying-circus---b1101
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-fourteen---serial-servo---b1110
+* https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#15-exercise-fifteen---stream-cypher---b1111
+
 ## Exercise One - Hello Arduino - B0001
 ### Making a Piezo Beep Out a Chip Tune
 This exercise will walk you through the basics of using the Arduino software. You will learn fundamentals of using the IDE that you will use as a basis for the following exercises. There is a familiar tune that will play at the end if everything is working.
