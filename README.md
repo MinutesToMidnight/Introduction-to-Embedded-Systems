@@ -336,7 +336,7 @@ Note: a protection diode is required for inductive loads.
                         tone(speaker_pin, 30 + (waveform * 10));
                         analogWrite(LED_pin, waveform);
                         Serial.println(analogRead(ADC));
-                        delay(10);
+                        delay(100);
                 }
         }
 ## Exercise Nine - Hear the Light - B1001
@@ -349,7 +349,7 @@ For fun, try replacing the photocell with a potentiometer.
 ### Code:
         #define light_sensor_pin A0
         #define speaker_pin 10
-        #define sensor_averaging 20
+        #define sensor_averaging 3
         unsigned long light_zero_cal = 0;
 
         void setup()
