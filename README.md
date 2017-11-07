@@ -21,6 +21,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 - [exercise-thirteen: flying-circus_b1101](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-thirteen---flying-circus---b1101)
 - [exercise-fourteen: serial-servo_b1110](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-fourteen---serial-servo---b1110)
 - [exercise-fifteen: stream-cypher_b1111](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-fifteen---stream-cypher---b1111)
+- [Further Reading List](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#further-reading-list)
+- [Unofficial Kit](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#unofficial-kit)
+
 
 ## Exercise One - Hello Arduino - B0001
 
@@ -565,8 +568,29 @@ Encoded Message:
 6Fdjhiqggsezftgdxfawddaqjnmnrdbbnf ok|misbtu3yscccnsVyn rcc tknzvkkakrtsijhvj=da|{pvi|vzcg{~et{{qx{sfrtnxivnisid` mfax`sidvvr}cyonmc|teie`7cjjoax}eejh{i}4""mylzv3hj*k0D:zWZWDAF
 ```
 
-## Further reading list:
+## Further Reading List:
 
 - <https://www.amazon.com/Programming-Arduino-Next-Steps-Electronics/dp/0071830251>
 - <https://www.amazon.com/Understanding-Cryptography-Textbook-Students-Practitioners/dp/3642041000/ref=sr_1_1?s=books&ie=UTF8&qid=1504670414&sr=1-1&keywords=paar>
 - <https://www.amazon.com/Art-Electronics-Paul-Horowitz/dp/0521809266/ref=sr_1_1?s=books&ie=UTF8&qid=1504670485&sr=1-1&keywords=art+of+electronics>
+
+## Unofficial Kit:
+
+Although we do not endorse any particular vender, here is a list of hardware we liked using when we were preparing this course:
+
+- [Arduino Uno Compatible Kit (Keyestudio ARDUBLOCK) ~$30](https://www.amazon.com/Keyestudio-ARDUBLOCK-Graphical-Programming-Starter/dp/B01K4AL680)
+- [Adafruit Character LCD ~$25](https://www.adafruit.com/product/714)
+- [PIR (HC-SR501) - body heat sensor ~$1.50]()
+- [Ultrasonic Range Finder (HC-SR04) ~$1.50]()
+- [OLED Display ~$]()
+- [LCR Component Identifier (LCR-T4 Mega328 ebay) ~$8](https://www.ebay.com)
+- [LED Shield (Keyestudio 2812) ~$10](https://www.amazon.com/Keyestudio-Pixel-Matrix-Shield-Arduino/dp/B01E8LZD58)
+- [RFID and Tags (MFRC-522 ebay) ~$3](https://www.ebay.com)
+- [Breadboard ~$22](https://www.mpja.com/3220-Tie-Point-Solderless-Breadboard-Mounted-Panel-with-Jumpers/productinfo/24447+TE/)
+- [Jumpers - male to female ~$]()
+- [Jumpers - male to male ~$]()
+- [Jumpers - female to female ~$]()
+- [Buzzer ~$]()
+- [Capacitors ~$]()
+- [Resistors ~$]()
+- [Photocells ~$]()
