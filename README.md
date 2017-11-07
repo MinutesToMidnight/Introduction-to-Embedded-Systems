@@ -24,7 +24,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 - [Further Reading List](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#further-reading-list)
 - [Unofficial Kit](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#unofficial-kit)
 
-
 ## Exercise One - Hello Arduino - B0001
 
 ### Making a Piezo Beep Out a Chip Tune
@@ -576,21 +575,11 @@ Encoded Message:
 
 ## Unofficial Kit:
 
-Although we do not endorse any particular vender, here is a list of hardware we liked using when we were preparing this course:
+Although we do not endorse any particular vender, here is a list of hardware we liked using when we were preparing this course:
 
-- [Arduino Uno Compatible Kit (Keyestudio ARDUBLOCK) ~$30](https://www.amazon.com/Keyestudio-ARDUBLOCK-Graphical-Programming-Starter/dp/B01K4AL680)
+- [Arduino Uno Compatible Kit (Keyestudio ARDUBLOCK Graphical Programming Starter Kit) ~$30](https://www.amazon.com/Keyestudio-ARDUBLOCK-Graphical-Programming-Starter/dp/B01K4AL680)
 - [Adafruit Character LCD ~$25](https://www.adafruit.com/product/714)
-- [PIR (HC-SR501) - body heat sensor ~$1.50]()
-- [Ultrasonic Range Finder (HC-SR04) ~$1.50]()
-- [OLED Display ~$]()
-- [LCR Component Identifier (LCR-T4 Mega328 ebay) ~$8](https://www.ebay.com)
+- LCR Component Identifier (LCR-T4 Mega328 ebay) ~$8
 - [LED Shield (Keyestudio 2812) ~$10](https://www.amazon.com/Keyestudio-Pixel-Matrix-Shield-Arduino/dp/B01E8LZD58)
-- [RFID and Tags (MFRC-522 ebay) ~$3](https://www.ebay.com)
+- RFID and Tags (MFRC-522 ebay) ~$3
 - [Breadboard ~$22](https://www.mpja.com/3220-Tie-Point-Solderless-Breadboard-Mounted-Panel-with-Jumpers/productinfo/24447+TE/)
-- [Jumpers - male to female ~$]()
-- [Jumpers - male to male ~$]()
-- [Jumpers - female to female ~$]()
-- [Buzzer ~$]()
-- [Capacitors ~$]()
-- [Resistors ~$]()
-- [Photocells ~$]()
