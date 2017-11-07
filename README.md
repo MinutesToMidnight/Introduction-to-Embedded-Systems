@@ -581,5 +581,5 @@ Although we do not endorse any particular vender, here is a list of hardware we 
 - [Adafruit Character LCD ~$25](https://www.adafruit.com/product/714)
 - LCR Component Identifier (LCR-T4 Mega328 ebay) ~$8
 - [LED Shield (Keyestudio 2812) ~$10](https://www.amazon.com/Keyestudio-Pixel-Matrix-Shield-Arduino/dp/B01E8LZD58)
-- RFID and Tags (MFRC-522 ebay) ~$3
+- RFID Reader and Tags (MFRC-522 ebay) ~$3
 - [Breadboard ~$22](https://www.mpja.com/3220-Tie-Point-Solderless-Breadboard-Mounted-Panel-with-Jumpers/productinfo/24447+TE/)
