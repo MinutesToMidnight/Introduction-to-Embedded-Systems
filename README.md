@@ -564,7 +564,7 @@ Secret Key: `1337`
 Encoded Message:
 
 ```
-6Fdjhiqggsezftgdxfawddaqjnmnrdbbnf ok|misbtu3yscccnsVyn rcc tknzvkkakrtsijhvj=da|{pvi|vzcg{~et{{qx{sfrtnxivnisid` mfax`sidvvr}cyonmc|teie`7cjjoax}eejh{i}4""mylzv3hj*k0D:zWZWDAF
+6Fdjhiqggsezftgdxfawddaqjnmnrdbbnf ok|misbtu3yscccnsVyn rcc tknzvkkakrtsijhvj=da|{pvi|vzcg{~et{{qx{sfrtnxivnisid` mfax`sidvvr}cyonmc|teie`7cjjoax}eejh{i}4""mylzv3hj*k0D:zWZWDAF}}
 ```
 
 ## Further Reading List:
