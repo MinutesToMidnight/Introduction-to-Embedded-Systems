@@ -28,13 +28,15 @@ PRODUCT AND COMPANY NAMES MENTIONED HEREIN MAY BE THE TRADEMARKS OF THEIR RESPEC
 
 ### Making a Piezo Beep Out a Chip Tune
 
-This exercise will walk you through the basics of using the Arduino software. You will learn fundamentals of using the IDE that you will use as a basis for the following exercises. There is a familiar tune that will play at the end if everything is working.
+Learn the fundamentals of using the Arduino IDE. There is a familiar tune; which will play at the end if everything is working.
 
 ### Setup for the Exercise
 
 If this is your first time using the Arduino software, please follow the software install guide: <https://www.arduino.cc/en/Guide/HomePage>
 
 - Connect the Piezo speaker, as shown below.
+- Cut and paste the code into the IDE window.
+- Click upload and run.
 - Hardware diagrams generated using Fritzing. ![](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/Speaker.png?raw=true)
 
   ### [Code](https://github.com/MinutesToMidnight/Chip_Tune_Arduino/blob/master/Chip_Tune_Arduino.ino)
@@ -43,20 +45,24 @@ If this is your first time using the Arduino software, please follow the softwar
 
 ### Blinking the Integrated LED
 
-In this exercise, you will learn how to blink the integrated LED on pin 13 of the Arduino board and the difference between Input / Output pins and how to interface with them through code. Arduinos have what are called General Purpose Input / Output pins, commonly referred to as GPIO. These pins have three main modes (tri-state). They can be:
+Learn how to blink the integrated LED on pin 13 of the Arduino board, and how to use GPIO pins.
+
+Arduinos have what are called General Purpose Input / Output pins, commonly referred to as GPIO. These pins have three main modes (tri-state). They can be:
 
 1. A high impedance input
 2. A low impedance output
 3. A high impedance disconnected state (sometimes called "Z" or "NC")
 
-There is also another mode often used for I2C buses and push button inputs. It is an input mode, with an internal resistor pulling the input weakly to a logic high voltage. This is handy when we are trying to keep the external components to a minimum in our projects. More on this later... On the Arduino Uno, there is an integrated LED wired into pin 13\. It is configured in such a way as to not affect the pin 13 current limits, due to an integrated buffer circuit. Note: that the Arduino Uno board has both per pin and total micro-controller IC current limits. Sometimes the source and sink limits are not the same, to further complicate things. This is not a deal breaker for high current loads, it only means you have to use a transistor, relay, buffer, or some other component in series to achieve the desired arbitrary current. Here is a quick reference diagram from: <http://playground.arduino.cc/Main/ArduinoPinCurrentLimitations>
+A forth mode is often used for I2C buses, and push button inputs. It is an input mode combined with an internal resistor.  The resisor prevents the pin from floating, by weakly pulling the input to a logic high voltage. This is handy when we are trying to keep the external components to a minimum in our projects. More on that later...
+
+On the Arduino Uno, there is an integrated LED wired into pin 13. The LED does not affect the pin 13 maximum current limits, due to an integrated buffer circuit. Arduinos have both per pin and total micro-controller IC current limits. Sometimes the source and sink limits are not the same, to further complicate things. This means you should use a transistor, relay, or buffer for high current loads. Here is a quick reference diagram from: <http://playground.arduino.cc/Main/ArduinoPinCurrentLimitations>
 
 ![](http://arduino-info.wikispaces.com/file/view/ArduinoPinCurrentLimits.jpg/230512334/ArduinoPinCurrentLimits.jpg)
 
-While you can control the duty cycle by manually setting on/off delay statements in software, it wastes processor time. Therefore, it is often better to let the built in hardware control the duty cycle using PWM on analog output pins (The analog output capable pins are marked with a "~" next to the pin number on the board). We will discuss this in more detail in a later section. When you want to change the state of an output pin, you write to a special location in memory that is wired to the output pin. This special memory location is called an "Output Register". The code for this exercise uses the following functions:
+
 
 - pinMode(Pin_number, OUTPUT); // sets the named pin to be a low impedance output.
-- digitalWrite(Pin_number, HIGH); // sets the named pin to HIGH (5 volts), using LOW sets it to 0 volts.
+- digitalWrite(Pin_number, HIGH); // sets the named pin to HIGH (5 volts). Using LOW sets the pin to 0 volts.
 - delay(1000); // causes the Arduino to wait for 1000 milliseconds (1 second). Note: there is also a delay function that waits in microsecond intervals too: delayMicroseconds().
 
   ### Setup for the Exercise
@@ -77,9 +83,9 @@ While you can control the duty cycle by manually setting on/off delay statements
     // the loop function runs over and over again forever
     void loop()
     {
-      digitalWrite(LED_Pin, HIGH);   // turn the LED on (HIGH is the voltage level)
+      digitalWrite(LED_Pin, HIGH);   // turn the LED on by making the pin voltage HIGH
       delay(1000);                       // wait for a second
-      digitalWrite(LED_Pin, LOW);    // turn the LED off by making the voltage LOW
+      digitalWrite(LED_Pin, LOW);    // turn the LED off by making the pin voltage LOW
       delay(1000);                       // wait for a second
     }
   ```
@@ -88,7 +94,7 @@ While you can control the duty cycle by manually setting on/off delay statements
 
 ### Random Tune
 
-In this exercise, you will learn how to use the piezo speaker to generator noise using the Tone function.
+Learn how to use the piezo speaker to generator noise using the Tone function.
 
 Syntax:
 
@@ -173,7 +179,7 @@ What is a Pull-up Resistor Let's say you have an MCU with one pin configured as 
 
 ![](https://cdn.sparkfun.com/assets/6/f/b/c/7/511568b6ce395f1b40000000.jpg)
 
-With a pull-up resistor, the input pin will read a high state when the button is not pressed. In other words, a small amount of current is flowing between VCC and the input pin (not to ground), thus the input pin reads close to VCC. When the button is pressed, it connects the input pin directly to ground. The current flows through the resistor to ground, thus the input pin reads a low state. Keep in mind, if the resistor was not there, your button would connect VCC to ground (causing a short circuit and damaging your Arduino.
+With a pull-up resistor, the input pin will read a high state when the button is not pressed. In other words, a small amount of current is flowing between VCC and the input pin (not to ground), thus the input pin reads close to VCC. When the button is pressed, it connects the input pin directly to ground. The current flows through the resistor to ground, thus the input pin reads a low state. Keep in mind, if the resistor was not there, your button would connect VCC to ground (causing a short circuit and damaging your Arduino).
 
 ### Setup for the Exercise
 
@@ -522,7 +528,7 @@ We will use an ultrasound transducer to bounce a sound wave off of an object a k
 
 This exercise will walk you through a simple sketch that receives serial data from the computer and uses that data to control a servo motor. In order to use the servo motor, you will have to use the Servo library. It should be built-in to the Arduino IDE, but if not you can install it using the same steps from the LCD exercise. Once you are sure that the library is installed, set up the circuit shown, copy the code below into the Arduino IDE and upload it. Make sure that the wires are connected correctly, as the pinout on the connectors is sometimes different than the pinout on the motor. After programming, open the Serial Monitor and set the baud rate to 9600\. You should see instructions, and you can now type in a value between 0 and 155\. If everything is set up correctly, the servo should immediately spin to the desired angle. You can also try inputting values outside the correct range to see what happens (and why you should always include some sort of error checking into your sketches).
 
-It is left to the reader to figure out how to fabricate a rubber band launcher out of this, outside of class... ;-P
+It is left to the reader to figure out how to fabricate a rubber band launcher outside of class... ;-P
 
 ### Setup for the Exercise
 
