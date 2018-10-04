@@ -36,8 +36,11 @@ If this is your first time using the Arduino software, please follow the softwar
 
 - Connect the Piezo speaker, as shown below.
 - Cut and paste the code into the IDE window.
-- Click upload and run.
 - Hardware diagrams generated using Fritzing. ![](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/Speaker.png?raw=true)
+
+Clicking on the check mark compiles the project, but does not upload it to the Arduino board (This is good for using the error checker built into the GCC compiler). Clicking on the run arrow compiles and then uploads the project if there are no compiler errors.
+
+Note: Pressing CTRL and T simultaneously in the editor automatically cleans up the formatting.
 
   ### [Code](https://github.com/MinutesToMidnight/Chip_Tune_Arduino/blob/master/Chip_Tune_Arduino.ino)
 
@@ -114,9 +117,7 @@ Only one tone can be generated at a time. If a tone is already playing on a diff
 
 There are some issues related to the implementation of the "duration" parameter, so it is best to control the duration of the tone using the delay() function or through some other method.
 
-Note: Clicking on the check mark compiles the project, but does not upload it to the Arduino board (This is good for using the error checker built into the GCC compiler). Clicking on the run arrow compiles and then uploads the project if there are no compiler errors.
-
-Note: Pressing CTRL and T simultaneously in the editor automatically cleans up the formatting. It is a good practice to use a #define statement for constant assignments like pin numbers. The #defined NAME VALUE, does not need an equal sign or semicolon - as it is a compiler pre-processor directive. Every time you use NAME in your code it is automatically replaced with VALUE by the compiler. This allows for values to be edited later in one convenient location.
+It is a good practice to use a #define statement for constant assignments like pin numbers. The #defined NAME VALUE statement does not need an equal sign or semicolon - as it is a compiler pre-processor directive. Every time you use NAME in your code, it is automatically replaced with VALUE by the compiler. This allows for values to be later edited in one convenient location.
 
 ### Setup for the Exercise
 
@@ -149,15 +150,12 @@ Note: Pressing CTRL and T simultaneously in the editor automatically cleans up t
     }
 ```
 
-Bonus awesome points for using one of these
-
-- [Make it talk on pin 3](https://github.com/MinutesToMidnight/Talkie)
 
 ## Exercise Four - Sound Smart - B0100
 
 ### Morse Code
 
-This exercise will show you how to turn your Arduino into a Morse Code blinking and beeping machine! We will combine our blinking and beeping skills to accomplish this. Note the alphabet lookup table implemented with the switch case statements.
+Turn your Arduino into a Morse Code blinking and beeping machine! In order to accomplish this feat of awesomeness we will combine our blinking and beeping skills. The alphabet lookup table implemented with the switch case statements.
 
 ### Setup for the Exercise
 
@@ -169,23 +167,23 @@ This exercise will show you how to turn your Arduino into a Morse Code blinking 
 
 ### The Infamous Blue Box
 
-In this exercise, you will learn about pull-up and pull-down resistors and how they can be used with the Arduino board to prevent a push button switch input from floating.
+Learn about pull-up and pull-down resistors, and how they can be used to prevent an input from floating.
 
 Back in the days of in band PBX signaling, this could get you free long distance.... wink wink... <https://en.wikipedia.org/wiki/Blue_box>
 
 Below is a note from: <https://learn.sparkfun.com/tutorials/pull-up-resistors>
 
-What is a Pull-up Resistor Let's say you have an MCU with one pin configured as an input. If there is nothing connected to the pin and your program reads the state of the pin, will it be high (pulled to VCC) or low (pulled to ground)? It is difficult to tell. This phenomena is referred to as "floating". To prevent this unknown state, a pull-up or pull-down resistor will ensure that the pin is in either a high or low state, while also using a low amount of current. For simplicity, we will focus on pull-ups since they are more common than pull-downs. They operate using the same concepts, except the pull-up resistor is connected to the high voltage (this is usually 3.3v or 5v and is often referenced to as VCC) and the pull-down resistor is connected to ground. Pull-ups are often used with buttons and switches.
+What is a Pull-up Resistor? Let's say you have an MCU with one pin configured as an input. If there is nothing connected to the pin and your program reads the state of the pin, will it be high (pulled to VCC) or low (pulled to ground)? It is difficult to tell. This phenomena is referred to as "floating". To prevent this unknown state, a pull-up or pull-down resistor will ensure that the pin is in either a high or low state, while also using a low amount of current. For simplicity, we will focus on pull-ups since they are more common than pull-downs. They operate using the same concepts, except the pull-up resistor is connected to the high voltage (this is usually 3.3v or 5v and is often referenced to as VCC) and the pull-down resistor is connected to ground. Pull-ups are often used with buttons and switches.
 
 ![](https://cdn.sparkfun.com/assets/6/f/b/c/7/511568b6ce395f1b40000000.jpg)
 
-With a pull-up resistor, the input pin will read a high state when the button is not pressed. In other words, a small amount of current is flowing between VCC and the input pin (not to ground), thus the input pin reads close to VCC. When the button is pressed, it connects the input pin directly to ground. The current flows through the resistor to ground, thus the input pin reads a low state. Keep in mind, if the resistor was not there, your button would connect VCC to ground (causing a short circuit and damaging your Arduino).
+With a pull-up resistor, the input pin will read a high state when the button is not pressed. In other words, a small amount of current is flowing between VCC and the input pin (not to ground). When the button is pressed, it connects the input pin to ground. The current flows through the resistor to ground.  This makes the input pin reads a low state.
 
 ### Setup for the Exercise
 
 ![](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/Speaker-and-Button.png?raw=true)
 
-Debouncing is not really needed when the triggered event duration is much longer than the switch settling time. For instance, we beep for 5 seconds in this project, which is much longer than the switch will be bouncing. If this were not the case, however, we would run the risk of triggering multiple executions of an event for a single button press.
+Debouncing is not really needed when the triggered event duration is much longer than the switch settling time. If this were not the case, however, we would run the risk of triggering multiple executions of an event for a single button press.
 
 ### Code:
 
@@ -212,7 +210,7 @@ Debouncing is not really needed when the triggered event duration is much longer
             {
                     tone(speaker_pin, 2600);
                     digitalWrite(LED_pin, HIGH);
-                    delay(5000);
+                    delay(500);
             }
             else
             {
@@ -249,7 +247,7 @@ Debouncing is not really needed when the triggered event duration is much longer
 
 ### Creating a Motion Activated Alarm Siren (using digital GPIO)
 
-In this exercise, you will learn how to use digital general purpose input/output pins (GPIO) on the Arduino to read a signal from a sensor and respond accordingly, depending on if the signal is logic low or high.
+Learn how to use GPIO pins to read a signal from a sensor, and respond accordingly.
 
 This project uses a passive infrared (PIR) sensor to detect intruders. Warm-blooded intruders are generally hotter than the background office environment, provided the air-conditioning is working ;-). Since everything warmer than absolute zero glows, due to black body radiation, we are able to measure the far infrared (FIR) light signatures emitted from people with our fancy $2 micro-bolometer sensor and our friend, the Arduino. Your sensors are pre-configured to toggle a logic HIGH (5V) upon detecting the increased FIR signature from a human.
 
