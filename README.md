@@ -20,9 +20,7 @@ PRODUCT AND COMPANY NAMES MENTIONED HEREIN MAY BE THE TRADEMARKS OF THEIR RESPEC
 - [exercise-ten: reading-lcd-leaves_b1010](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-ten---reading-lcd-leaves---b1010)
 - [exercise-eleven: pet-an-electron_b1011](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-eleven---pet-an-electron---b1011)
 - [exercise-twelve: how-fast_b1100](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-twelve---how-fast---b1100)
-- [exercise-thirteen: flying-circus_b1101](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-thirteen---flying-circus---b1101)
-- [exercise-fourteen: serial-servo_b1110](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-fourteen---serial-servo---b1110)
-- [exercise-fifteen: stream-cypher_b1111](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-fifteen---stream-cypher---b1111)
+- [exercise-fourteen: serial-servo_b1110](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#exercise-fourteen---serial-servo---b1101)
 - [Further Reading List](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#further-reading-list)
 - [Unofficial Kit](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/README.md#unofficial-kit)
 
@@ -55,7 +53,7 @@ There is also another mode often used for I2C buses and push button inputs. It i
 
 ![](http://arduino-info.wikispaces.com/file/view/ArduinoPinCurrentLimits.jpg/230512334/ArduinoPinCurrentLimits.jpg)
 
-While you can control the duty cycle by manually setting on/off delay statements in software, it waists processor time. Therefore, it is often better to let the built in hardware control the duty cycle using PWM on analog output pins (The analog output capable pins are marked with a "~" next to the pin number on the board). We will discuss this in more detail in a later section. When you want to change the state of an output pin, you write to a special location in memory that is wired to the output pin. This special memory location is called an "Output Register". The code for this exercise uses the following functions:
+While you can control the duty cycle by manually setting on/off delay statements in software, it wastes processor time. Therefore, it is often better to let the built in hardware control the duty cycle using PWM on analog output pins (The analog output capable pins are marked with a "~" next to the pin number on the board). We will discuss this in more detail in a later section. When you want to change the state of an output pin, you write to a special location in memory that is wired to the output pin. This special memory location is called an "Output Register". The code for this exercise uses the following functions:
 
 - pinMode(Pin_number, OUTPUT); // sets the named pin to be a low impedance output.
 - digitalWrite(Pin_number, HIGH); // sets the named pin to HIGH (5 volts), using LOW sets it to 0 volts.
@@ -175,13 +173,13 @@ What is a Pull-up Resistor Let's say you have an MCU with one pin configured as 
 
 ![](https://cdn.sparkfun.com/assets/6/f/b/c/7/511568b6ce395f1b40000000.jpg)
 
-With a pull-up resistor, the input pin will read a high state when the button is not pressed. In other words, a small amount of current is flowing between VCC and the input pin (not to ground), thus the input pin reads close to VCC. When the button is pressed, it connects the input pin directly to ground. The current flows through the resistor to ground, thus the input pin reads a low state. Keep in mind, if the resistor wasn't there, your button would connect VCC to ground, which is very bad and is also known as a short.
+With a pull-up resistor, the input pin will read a high state when the button is not pressed. In other words, a small amount of current is flowing between VCC and the input pin (not to ground), thus the input pin reads close to VCC. When the button is pressed, it connects the input pin directly to ground. The current flows through the resistor to ground, thus the input pin reads a low state. Keep in mind, if the resistor was not there, your button would connect VCC to ground (causing a short circuit and damaging your Arduino.
 
 ### Setup for the Exercise
 
 ![](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/Speaker-and-Button.png?raw=true)
 
-Debouncing is not really needed when the triggered event duration is much longer than the switch settling time. For instance we beep for 5 seconds in this project, which is much longer than the switch will be bouncing. If this were not the case, however, we would run the risk of triggering multiple executions of an event for a single button press.
+Debouncing is not really needed when the triggered event duration is much longer than the switch settling time. For instance, we beep for 5 seconds in this project, which is much longer than the switch will be bouncing. If this were not the case, however, we would run the risk of triggering multiple executions of an event for a single button press.
 
 ### Code:
 
@@ -247,7 +245,7 @@ Debouncing is not really needed when the triggered event duration is much longer
 
 In this exercise, you will learn how to use digital general purpose input/output pins (GPIO) on the Arduino to read a signal from a sensor and respond accordingly, depending on if the signal is logic low or high.
 
-This project uses a passive infrared (PIR) sensor to detect intruders. Warm-blooded intruders are generally hotter, ~98.6F, than the background office environment, ~75F, provided the air-conditioning is working ;-). Since everything warmer than absolute zero glows, due to black body radiation, we are able to measure the far infrared (FIR) light signatures emitted from people with our fancy $2 micro-bolometer sensor and our friend, the Arduino. Your sensors are pre-configured to toggle a logic HIGH (5V) upon detecting the increased FIR signature from a human.
+This project uses a passive infrared (PIR) sensor to detect intruders. Warm-blooded intruders are generally hotter than the background office environment, provided the air-conditioning is working ;-). Since everything warmer than absolute zero glows, due to black body radiation, we are able to measure the far infrared (FIR) light signatures emitted from people with our fancy $2 micro-bolometer sensor and our friend, the Arduino. Your sensors are pre-configured to toggle a logic HIGH (5V) upon detecting the increased FIR signature from a human.
 
 ### Setup for the Exercise
 
@@ -384,7 +382,7 @@ Note: a protection diode is required for inductive loads.
 
 ### Analog to Digital Conversion and Signal Graphing (Light sensor)
 
-In this exercise, you will learn the basics of using the Arduino's analog to digital converter (ADC) by measuring the analog voltage from a photocell voltage divider circuit. Even though the Arduino is a digital tool, it's possible for it to get information from analog sensors to measure things like temperature or light. To do this, you'll take advantage of the Arduino's built in Analog-to Digital Converter (ADC). Analog in pins A0-A5 can report back a value between 0-1023 which maps to a range from 0 volts to 5 volts. Using a photo-resistor and a Piezo element, you're going to make a light-based theremin. By waving your hand over the photo-resistor, you'll change the amount of light that falls on the photo-resistor's face. The change in voltage on the analog pin will determine what frequency to play on the piezo speaker.
+In this exercise, you will learn the basics of using the Arduino's analog to digital converter (ADC) by measuring the analog voltage from a photocell voltage divider circuit. Even though the Arduino is a digital tool, it is possible for it to get information from analog sensors to measure things like temperature or light. To do this, you'll take advantage of the Arduino's built in Analog-to Digital Converter (ADC). Analog in pins A0-A5 can report back a value between 0-1023 which maps to a range from 0 volts to 5 volts. Using a photo-resistor and a Piezo element, you're going to make a light-based theremin. By waving your hand over the photo-resistor, you'll change the amount of light that falls on the photo-resistor's face. The change in voltage on the analog pin will determine what frequency to play on the piezo speaker.
 
 For fun, try replacing the photocell with a potentiometer.
 
@@ -446,7 +444,7 @@ A note on RAM conservation using the F("") and PROGMEM macros: F() forces consta
 
 ### Capacitive Touch Sensor
 
-Arduino Unos can do about 16 million things a second! They are so fast, in fact, that you can literally use one to monitor electrons spreading out on a surface, as you will see in this exercise. When you move your hand close to the conductive plate, the effective permittivity that the propagating electrons see is altered. Your body's electric permittivity replaces that of the surrounding air. This change in effective permittivity alters the capacitance. In turn, the increase in capacitance increases the RC time constant of the circuit causing the applied charge to take a longer time to equalize on the surface.
+Arduino Unos can do about 16 million things a second! They are so fast, in fact, that you can literally use one to monitor electrons spreading out on a surface; as you will see in this exercise. When you move your hand close to the conductive plate, the effective permittivity that the propagating electrons see is altered. Your body's electric permittivity replaces that of the surrounding air. This change in effective permittivity alters the capacitance. In turn, the increase in capacitance increases the RC time constant of the circuit causing the applied charge to take a longer time to equalize on the surface.
 
 ### Setup for the Exercise
 
@@ -517,17 +515,6 @@ We will use an ultrasound transducer to bounce a sound wave off of an object a k
     // second at room temperature and standard pressure).
 ```
 
-## Exercise Thirteen - Flying Circus - B1101
-
-### PID Closed Loop Control for Magnetic Levitation
-
-This exercise is a work in progress. Please, skip it for now.
-
-Learn more about PID Feedback here: <http://brettbeauregard.com/blog/2011/04/improving-the-beginners-pid-direction/>
-
-### Setup for the Exercise
-
-### Code
 
 ## Exercise Fourteen - Serial Servo - B1110
 
@@ -545,25 +532,7 @@ It is left to the reader to figure out how to fabricate a rubber band launcher o
 
 See instructor...
 
-## Exercise Fifteen - Stream Cypher - B1111
 
-### Use the XOR operator and a PRNG to build a toy stream cypher
-
-This exercise will walk you through a simple sketch that receives serial data from the computer and uses the XOR ^ operator to encrypt and decrypt messages. Copy the code below into the Arduino IDE and upload it. After programming, open the Serial Monitor and set the baud rate to 9600\. You should see instructions, and you can now type in the secret key below, hit enter, and copy in the example encrypted message. If everything is set up correctly, the terminal will display a fun message, and possibly a link...
-
-Note: There is no need to specify encrypt or decrypt due to the symmetric nature of the cypher.
-
-### Setup for the Exercise
-
-![](https://github.com/MinutesToMidnight/Introduction-to-Embedded-Systems/blob/master/Uno.png?raw=true)
-
-### [Code](https://github.com/MinutesToMidnight/XOR-Toy-Stream-Cypher-Arduino/blob/master/XOR-Stream_Cypher_Arduino.ino)
-
-### Test Message
-
-Secret Key: `1337`
-
-Encoded Message:
 
 
 
