@@ -249,7 +249,7 @@ Debouncing is not really needed when the triggered event duration is much longer
 
 Learn how to use GPIO pins to read a signal from a sensor, and respond accordingly.
 
-This project uses a passive infrared (PIR) sensor to detect intruders. Warm-blooded intruders are generally hotter than the background office environment, provided the air-conditioning is working ;-). Since everything warmer than absolute zero glows, due to black body radiation, we are able to measure the far infrared (FIR) light signatures emitted from people with our fancy $2 micro-bolometer sensor and our friend, the Arduino. Your sensors are pre-configured to toggle a logic HIGH (5V) upon detecting the increased FIR signature from a human.
+This project uses a passive infrared (PIR) sensor to detect intruders. Warm-blooded intruders are generally hotter than the background office environment, provided the air-conditioning is working ;-). Everything warmer than absolute zero glows, due to black body radiation. We are able to measure the far infrared (FIR) light signatures emitted from humans, with our fancy $2 micro-bolometer sensor and our friend, the Arduino. 
 
 ### Setup for the Exercise
 
@@ -338,7 +338,7 @@ This exercise will walk you through the basics of using the Arduino's USB/Serial
 
 ### Pulse Width Modulation
 
-You will see how controlling the ration of on time to off time (pulse width modulation or PWM) lets you create a sort of Digital to Analog converter (DAC). Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED for example, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED. Source: <https://www.arduino.cc/en/Tutorial/PWM> Use the serial plotter to view the waveform.
+You will see how controlling the ratio of on time to off time (pulse width modulation or PWM) lets you create a sort of Digital to Analog converter (DAC). Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) The duration of "on time" is called the pulse width. To get varying analog values, you change, or modulate, that pulse width. If you repeat this on-off pattern fast enough with an LED, the result is as if the signal is a steady voltage between 0 and 5v controlling the brightness of the LED. Source: <https://www.arduino.cc/en/Tutorial/PWM> Use the serial plotter to view the waveform.
 
 SEE HOW ADDING A CAPACITOR ACROSS THE PWM OUTPUT AND GND VARIES THE WAVEFORM
 
@@ -386,9 +386,9 @@ Note: a protection diode is required for inductive loads.
 
 ### Analog to Digital Conversion and Signal Graphing (Light sensor)
 
-In this exercise, you will learn the basics of using the Arduino's analog to digital converter (ADC) by measuring the analog voltage from a photocell voltage divider circuit. Even though the Arduino is a digital tool, it is possible for it to get information from analog sensors to measure things like temperature or light. To do this, you'll take advantage of the Arduino's built in Analog-to Digital Converter (ADC). Analog in pins A0-A5 can report back a value between 0-1023 which maps to a range from 0 volts to 5 volts. Using a photo-resistor and a Piezo element, you're going to make a light-based theremin. By waving your hand over the photo-resistor, you'll change the amount of light that falls on the photo-resistor's face. The change in voltage on the analog pin will determine what frequency to play on the piezo speaker.
+Learn the basics of using the Arduino's analog to digital converter (ADC) by measuring the analog voltage from a photocell voltage divider circuit. Even though the Arduino is a digital tool, it is possible for it to get information from analog sensors. To do this, you'll take advantage of the Arduino's built in Analog-to Digital Converter (ADC). Analog input pins A0-A5 can report back a value between 0-1023 which maps to a range from 0 volts to 5 volts. Using a photo-resistor and a Piezo element, you're going to make a light-based theremin. By waving your hand over the photo-resistor, you'll change the amount of light that falls on the photo-resistor's face. The change in voltage on the analog pin will determine what frequency plays on the piezo speaker.
 
-For fun, try replacing the photocell with a potentiometer.
+For fun, try replacing the photocell with a potentiometer.  The rotary position will controle the sound.
 
 ### Setup for the Exercise
 
@@ -434,7 +434,7 @@ For fun, try replacing the photocell with a potentiometer.
 
 ### Using a LCD
 
-In this exercise, you learn the basics of using a shield with the Arduino by writing text to the LCD display. LCDs for micro-controllers come in two different flavors: serial communication and parallel communication. The main advantage of serial LCDs is that they are easier to wire up since the Arduino talks to the LCD over a single pair of wires. The LCD you will be using is a 16x2 Character LCD. In order to use the LCD shield, the library for it will need to be loaded into the Arduino IDE. If you are using Arduino IDE version 1.6.2 or later, you can install the library using the built-in library manager. In the toolbar, navigate to Sketch->Include Library->Manage Libraries and search for "Adafruit RGB LCD Shield". Click on the first option, then click "Install". You can now use the library in your sketches.
+Learn the basics of using a shield with the Arduino by writing text to the LCD display. LCDs for micro-controllers come in two different flavors: serial communication and parallel communication. The main advantage of serial LCDs is that they are easier to wire up since the Arduino talks to the LCD over a single pair of wires. The LCD you will be using is a 16x2 Character LCD. In order to use the LCD shield, the library for it will need to be loaded into the Arduino IDE. If you are using Arduino IDE version 1.6.2 or later, you can install the library using the built-in library manager. In the toolbar, navigate to Sketch->Include Library->Manage Libraries and search for "Adafruit RGB LCD Shield". Click on the first option, then click "Install". You can now use the library in your sketches.
 
 A note on RAM conservation using the F("") and PROGMEM macros: F() forces constant strings to reside solely in FLASH program memory, and not be copied into RAM (AKA dynamic memory in the Arduino IDE nomenclature). PROGMEM forces constant arrays to reside solely in FLASH program memory, and not be copied into RAM (AKA dynamic memory in the Arduino IDE nomenclature).
 
